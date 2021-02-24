@@ -1,24 +1,27 @@
 import React from 'react'
 
 const Departments = (props) => {
-    const {name, body} = props
+    const { departments } = props
 
     const renderDepartments = () => {
-        return(
-            <div>
-                <h1>{name}</h1>
-                <p>{body}</p>
+        return departments.map(department => {
+            return(
+            <div className='department_container'>
+                <h1>{department.name}</h1>
+                <p>{department.body}</p>
+                <a href={`/departments/${department.id}`}>View Department</a>
             </div>
         )
-    }
+    })
+}
 return(
 
-        <div>
+        <div className='departments_container'>
             <h1> Departments </h1>
             {renderDepartments()}
         </div>
     )
 
-}
 
+}
 export default Departments;
