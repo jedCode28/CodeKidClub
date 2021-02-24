@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Department = (props) => {
-  const {departments} = props
+  const {department} = props
 
   const renderDepartments = () => {
     return departments.map(department => {
@@ -15,7 +15,7 @@ const Department = (props) => {
       </div>
     )
 
-  }
+  })
 
 }
 
