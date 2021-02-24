@@ -1,8 +1,9 @@
 class DepartmentsController < ApplicationController
+  before_action :set_sub, only: [:show, :update, :edit, :destroy]
   def index
     @departments = Department.all
 
-    render compnent: 'Departments', props: {departments: @departments}
+    render component: 'Departments', props: {departments: @departments}
 
   end
 
