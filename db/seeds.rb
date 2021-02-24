@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Department.destroy_all
+
+3.times do 
+    Department.create(name: Faker::Coffee.blend_name, body: Faker::Coffee.notes)
+
+end
+
+puts "seeded #{Department.all}"
+
