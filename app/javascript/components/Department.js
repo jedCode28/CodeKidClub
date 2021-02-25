@@ -30,7 +30,7 @@
 import React from 'react';
 export default (props) => {
 
-  const {name, body} = props.sub;
+  const {name, body} = props.department;
   return (
     <>
       <h1>Departmentjs</h1>
