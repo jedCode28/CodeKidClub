@@ -9,4 +9,4 @@ Department.destroy_all
 3.times do 
     Department.create(name: Faker::Coffee.blend_name, body: Faker::Coffee.notes)
 end
-puts "seeded #{Department.size}"
+puts "seeded #{Department.length}"

@@ -13,14 +13,14 @@ const Departments = (props) => {
             </div>
         )
     })
-}
-return(
+  }
+    return(
 
         <div className='departments_container'>
             <h1> Departments </h1>
             {renderDepartments()}
         </div>
-    )
+        )
 
 
 }
