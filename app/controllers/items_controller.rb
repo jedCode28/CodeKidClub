@@ -3,6 +3,10 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @item = Item.find(params[:id])
+    render component: "Item", props: {item: @item}
+
+
   end
 
   def new

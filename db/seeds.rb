@@ -5,15 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Department.destroy_all
 Item.destroy_all
+Department.destroy_all
+
 3.times do 
-    Department.create(name: Faker::Coffee.blend_name, body: Faker::Coffee.notes)
+    d = Department.create(name: Faker::Coffee.blend_name, body: Faker::Coffee.notes)
     3.times do 
-      Item.create(name: Faker::Beer , body: Faker::Dessert)
+      d.items.create(name: Faker::Beer.brand, body: Faker::Dessert.flavor)
     end 
 end
-puts "seeded #{Department.length}"
+puts "seeded #{Department.all.size}"
+puts "seeded"
 
 
 

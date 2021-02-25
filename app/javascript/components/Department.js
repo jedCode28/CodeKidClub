@@ -1,45 +1,33 @@
-// import React from 'react'
 
-// const Department = (props) => {
-//   const {department} = props
-
-//   const renderDepartments = () => {
-//     return department.map(department => {
-      
-//     return (
-//       <div>
-//         <div className='department-container'>
-//           <h1>{department.name} department id is {department.id}</h1>
-//           <a href='/'>back to departments</a>
-//         </div>
-//       </div>
-//     )
-//     }
-// )}
-//   return renderDepartments (
-//       <>
-//       <h1>Departments</h1>
-//       </>
-//   )
-
-
-// }
-
-// export default Department;
 
 import React from 'react';
-export default (props) => {
+ const Department = (props) => {
 
-  const {name, body} = props.department;
+  const {department, items} = props;
+  const {name, body} = department;
+  const renderItems = () => {
+  return items.map (item => {
+    return ( 
+      <div className='department_container'>
+        <h1>{item.name}</h1>
+        <h2>{item.body}</h2>
+        <a href={`/departments/${department.id}/items/${item.id}`}>View Item</a>
+      </div>
+    )
+        })
+      }
   return (
-    <>
-      <h1>Departmentjs</h1>
+    <div className='departments_container'>
+      <h1>Department</h1>
       <h3>{name}</h3>
       <p>{body}</p>
       <a href="/">back</a>
-    </>
+      {renderItems()}
+    </div>
+    
   );
 }
+export default Department;
 
 
 
