@@ -30,11 +30,12 @@
 import React from 'react';
 export default (props) => {
 
-  const {name, body} = props.sub;
+  const {name, body} = props.department;
   return (
     <>
       <h1>Departmentjs</h1>
       <h3>{name}</h3>
+      <p>{body}</p>
       <a href="/">back</a>
     </>
   );
