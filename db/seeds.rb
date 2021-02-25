@@ -14,5 +14,4 @@ Department.destroy_all
 
 end
 
-puts "seeded #{Department.all}"
-
+puts "seeded #{Department.length}"
