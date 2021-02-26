@@ -2,6 +2,7 @@ class DepartmentsController < ApplicationController
   before_action :set_department, only: [:show, :update, :edit, :destroy]
   def index
     @departments = Department.all
+    
 
     render component: 'Departments', props: {departments: @departments}
 
@@ -9,8 +10,9 @@ class DepartmentsController < ApplicationController
 
   def show
     @department = Department.find(params[:id])
+    @items = @department.items.all
     
-    render component: "Department", props: {department: @department}
+    render component: "Department", props: {department: @department, items: @items}
   end
 
   def new
