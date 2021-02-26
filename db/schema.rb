@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_213127) do
 
   create_table "departments", force: :cascade do |t|
     t.string "name"
-    t.string "body"
+    t.text "body"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
