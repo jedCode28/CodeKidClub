@@ -5,9 +5,6 @@ Rails.application.routes.draw do
   resources :departments do
     resources :items
   end 
-<<<<<<< HEAD
   
-=======
->>>>>>> 9ac82fc33e62ca62690339dd9a2c19ae2e7762dc
 end
 

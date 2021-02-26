@@ -18,6 +18,7 @@ const Departments = (props) => {
 
         <div className='departments_container'>
             <h1> Departments </h1>
+            <a href='/departments/new'>New Department</a>
             {renderDepartments()}
         </div>
         )

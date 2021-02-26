@@ -21,6 +21,7 @@ import React from 'react';
       <h1>Department</h1>
       <h3>{name}</h3>
       <p>{body}</p>
+      <a href={`/departments/${department.id}/items/new/`}>New Item</a>
       <a href="/">back</a>
       {renderItems()}
     </div>

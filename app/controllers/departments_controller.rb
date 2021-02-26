@@ -16,6 +16,15 @@ class DepartmentsController < ApplicationController
   end
 
   def new
+    @department = Department.new
+
+    render component: "NewDepartment"
+  end
+  def create
+  @department = Department.new(department_params)
+  if @department.save
+    redirect_to departments_path
+  end
   end
 
   def edit
