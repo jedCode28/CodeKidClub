@@ -20,6 +20,10 @@ class ItemsController < ApplicationController
 
   private
 
+  def set_department
+    @department = Department.find(params[:department_id])
+  end 
+
   def set_item
     @item = Item.find(params[:id])
   end 
