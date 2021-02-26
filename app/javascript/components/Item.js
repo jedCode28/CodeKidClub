@@ -9,6 +9,7 @@ export default (props) => {
             <h2>{body}</h2>
             <h5>item id:{id}</h5>
             <a href={`/departments/${item.department_id}`}>back</a>
+            <a href={`/departments/${item.department_id}`}>delete</a>
         </div>
     )
 }
